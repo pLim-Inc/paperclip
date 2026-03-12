@@ -1,0 +1,14 @@
+services:
+  db:
+    ports: []
+
+  server:
+    container_name: paperclip-server
+    ports: []
+    networks:
+      - default
+      - liftgrid-backend
+
+networks:
+  liftgrid-backend:
+    external: true
