@@ -23,12 +23,25 @@ services:
       PAPERCLIP_DEPLOYMENT_EXPOSURE: "private"
       PAPERCLIP_PUBLIC_URL: "${PAPERCLIP_PUBLIC_URL:-http://localhost:3100}"
       BETTER_AUTH_SECRET: "${BETTER_AUTH_SECRET:?BETTER_AUTH_SECRET must be set}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+      PAPERCLIP_AGENT_JWT_SECRET: "${PAPERCLIP_AGENT_JWT_SECRET}"
     volumes:
       - paperclip-data:/paperclip
+      - /opt/liftgrid:/opt/liftgrid:ro
+      - /opt/cplimission:/opt/cplimission:ro
+      - /opt/aifsacct:/opt/aifsacct:ro
+      - /root/.claude:/paperclip/.claude:rw
     depends_on:
       db:
         condition: service_healthy
+    networks:
+      - default
+      - liftgrid-backend
 
 volumes:
   pgdata:
   paperclip-data:
+
+networks:
+  liftgrid-backend:
+    external: true
