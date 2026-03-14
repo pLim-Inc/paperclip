@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "plugins": [
+    "adspirer-ads-agent@claude-plugins-official",
+    "chrome-devtools-mcp@claude-plugins-official",
+    "amazon-location-service@claude-plugins-official",
+    "clangd-lsp@claude-plugins-official",
+    "commit-commands@claude-plugins-official",
+    "code-review@claude-plugins-official",
+    "security-guidance@claude-plugins-official",
+    "claude-md-management@claude-plugins-official",
+    "data@claude-plugins-official",
+    "claude-code-setup@claude-plugins-official",
+    "firecrawl@claude-plugins-official",
+    "github@claude-plugins-official",
+    "playground@claude-plugins-official",
+    "playwright@claude-plugins-official",
+    "stripe@claude-plugins-official",
+    "typescript-lsp@claude-plugins-official",
+    "superpowers@claude-plugins-official"
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(yarn *)",
+      "Bash(pnpm *)",
+      "Bash(python *)",
+      "Bash(python3 *)",
+      "Bash(pip *)",
+      "Bash(pip3 *)",
+      "Bash(docker *)",
+      "Bash(docker-compose *)",
+      "Bash(gh *)",
+      "Bash(curl *)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(cat *)",
+      "Bash(grep *)",
+      "Bash(node *)",
+      "Bash(ts-node *)",
+      "Bash(pytest *)",
+      "Bash(jest *)",
+      "Bash(make *)",
+      "Skill"
+    ]
+  }
+}
